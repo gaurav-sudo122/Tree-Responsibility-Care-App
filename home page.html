@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tree Care – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f7f6;
+      color: #1f2d2b;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: auto;
+      padding: 16px;
+    }
+
+    /* HERO CARD */
+    .hero {
+      background: linear-gradient(
+        rgba(0,0,0,0.25),
+        rgba(0,0,0,0.25)
+      ),
+      url("https://images.unsplash.com/photo-1524594154908-edd1c9c2c78a");
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      padding: 20px;
+      color: white;
+      position: relative;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #6fbf8f;
+      padding: 6px 12px;
+      border-radius: 12px;
+      font-size: 13px;
+      margin: 10px 0;
+    }
+
+    .hero small {
+      opacity: 0.9;
+      display: block;
+    }
+
+    .confidence {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: #e9f7ef;
+      color: #1b7f4c;
+      padding: 6px 12px;
+      border-radius: 14px;
+      font-size: 13px;
+    }
+
+    /* META INFO */
+    .meta {
+      margin: 14px 0;
+      font-size: 14px;
+      color: #4b5e5b;
+    }
+
+    /* CARD */
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    /* CONDITIONS */
+    .condition {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      font-size: 18px;
+    }
+
+    .water { background: #e6f3ff; }
+    .sun { background: #fff6d8; }
+    .temp { background: #ffe6e6; }
+
+    /* GROWTH */
+    .growth {
+      height: 80px;
+      background: linear-gradient(135deg, #d9f2e6, #f2fbf7);
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .growth::after {
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      left: 10px;
+      width: 90%;
+      height: 3px;
+      background: linear-gradient(to right, #6fbf8f, #2f8f6b);
+    }
+
+    .growth-label {
+      text-align: center;
+      margin-top: 10px;
+      color: #2f8f6b;
+      font-weight: 600;
+    }
+
+    .next-check {
+      text-align: right;
+      font-size: 13px;
+      color: #6a7f7b;
+    }
+
+    /* WATER INPUT */
+    .water-options {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 12px 0;
+    }
+
+    .water-options button {
+      flex: 1;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #cfe7db;
+      background: #f8fffb;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .water-options .active {
+      background: #3fa87a;
+      color: white;
+      border-color: #3fa87a;
+    }
+
+    .result {
+      background: #e9f7ef;
+      color: #1b7f4c;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="confidence">✔ Confidence: High</div>
+      <h1>Jamun Tree</h1>
+      <div class="badge">Healthy</div>
+      <small>Home Backyard</small>
+      <small>Last updated: today</small>
+    </div>
+
+    <div class="meta">
+      Tree age: <strong>42 days</strong> · ☀ Summer Care Mode
+    </div>
+
+    <!-- CONDITIONS -->
+    <div class="card">
+      <h3>Current Conditions</h3>
+
+      <div class="condition">
+        <div class="icon water">💧</div>
+        Water: <strong>&nbsp;Moderate</strong>
+      </div>
+
+      <div class="condition">
+        <div class="icon sun">☀️</div>
+        Sunlight: <strong>&nbsp;4–6 hrs</strong>
+      </div>
+
+      <div class="condition">
+        <div class="icon temp">🌡</div>
+        Temperature: <strong>&nbsp;28–32°C</strong>
+      </div>
+    </div>
+
+    <!-- GROWTH -->
+    <div class="card">
+      <div class="next-check">Next check in 3 days</div>
+      <h3>Growth Trend</h3>
+      <div class="growth"></div>
+      <div class="growth-label">Improving</div>
+    </div>
+
+    <!-- WATERING -->
+    <div class="card">
+      <h3>How much water did you give today?</h3>
+
+      <div class="water-options">
+        <button>0.5 L</button>
+        <button class="active">1 L</button>
+        <button>2 L</button>
+        <button>Custom</button>
+      </div>
+
+      <div class="result">
+        ✔ Today’s watering is sufficient.<br />
+        Next watering recommended: <strong>after 3 days</strong>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

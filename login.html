@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login – Tree Care</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(180deg, #e9f7ef, #f5f7f6);
+      color: #1f2d2b;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phone {
+      width: 100%;
+      max-width: 420px;
+      padding: 20px;
+    }
+
+    /* HEADER */
+    .header {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .header p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #4b5e5b;
+    }
+
+    /* CARD */
+    .card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #3b4f4b;
+    }
+
+    .field input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid #dbe7e1;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .field input:focus {
+      border-color: #3fa87a;
+      box-shadow: 0 0 0 2px rgba(63,168,122,0.15);
+    }
+
+    .optional {
+      font-size: 12px;
+      color: #7a8f8b;
+    }
+
+    /* SUGGESTION BOX */
+    .suggestion {
+      background: #f2fbf7;
+      border-left: 4px solid #3fa87a;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      margin-bottom: 18px;
+      color: #2f6f55;
+    }
+
+    .suggestion strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #1b7f4c;
+    }
+
+    /* TREE CHOICE */
+    .tree-choice {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .tree-choice button {
+      flex: 1;
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid #cfe7db;
+      background: #f8fffb;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .tree-choice .active {
+      background: #3fa87a;
+      color: white;
+      border-color: #3fa87a;
+    }
+
+    /* BUTTON */
+    .btn {
+      margin-top: 22px;
+      width: 100%;
+      padding: 16px;
+      border-radius: 16px;
+      border: none;
+      background: #3fa87a;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #36966b;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 12px;
+      color: #6a7f7b;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="phone">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>Login</h1>
+      <p>Tell us about you and your tree</p>
+    </div>
+
+    <!-- FORM CARD -->
+    <div class="card">
+
+      <div class="field">
+        <label>Your Name</label>
+        <input type="text" placeholder="Enter your name" />
+      </div>
+
+      <div class="field">
+        <label>Address / Location</label>
+        <input type="text" placeholder="City, area or locality" />
+      </div>
+
+      <!-- LOCATION BASED SUGGESTION -->
+      <div class="suggestion">
+        <strong>Based on your location</strong>
+        Trees like <b>Neem</b>, <b>Peepal</b>, and <b>Jamun</b> generally grow well in this environment.
+      </div>
+
+      <div class="field">
+        <label>
+          Tree Name <span class="optional">(optional)</span>
+        </label>
+        <input type="text" placeholder="e.g. My Neem Tree" />
+      </div>
+
+      <!-- TREE CHOICE -->
+      <div class="field">
+        <label>Which tree do you want to plant?</label>
+        <div class="tree-choice">
+          <button class="active">Neem</button>
+          <button>Jamun</button>
+          <button>Peepal</button>
+          <button>Other</button>
+        </div>
+      </div>
+
+      <button class="btn">Continue</button>
+    </div>
+
+    <div class="footer-note">
+      One user · One tree · Real responsibility
+    </div>
+
+  </div>
+</body>
+</html>
