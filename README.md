@@ -144,3 +144,87 @@ With this system:
 - Fake claims will reduce
 - Governments and NGOs will get real impact data
 - People will start treating plantation as a **serious responsibility**
+
+# A. Flow Charts / DFDs 
+
+This section explains how the system works internally, from user action to outcome.
+
+## A1. High-Level Flow Chart
+Flow:
+
+User plants a tree
+
+- User registers the tree in the app
+- Tree is assigned to one responsible user
+- User provides periodic updates
+- System analyzes inputs (rules + AI)
+- Clear guidance or confirmation is shown
+- Tree health and survival are tracked over time
+Purpose:
+
+To convert plantation from a one-time action into a continuous responsibility loop.
+## A2. Data Flow Diagram
+
+**Entities:**
+
+- User
+- Mobile App
+- Backend Logic
+- AI Image Analyzer
+- Database
+
+**Data Flow:**
+
+User
+
+- sends photo + care input
+- Mobile App
+- Backend Logic
+
+Backend Logic
+-  stores records in Database
+- ends image to AI Analyzer
+
+AI Analyzer
+- returns health status + confidence
+
+Backend Logic
+
+- combines rules + AI output
+- sends final guidance to Mobile App
+
+User
+
+- sees next action or confirmation
+# B. What We Will Add or Improve in Round 2
+
+Round 1 focuses on clarity of idea and prototype.
+
+Round 2 focuses on making the idea more realistic, responsible, and usable at scale.
+
+## B1. Stronger Responsibility Ownership
+
+In Round 2, responsibility will be made stricter.
+
+- One user can actively manage only one tree
+- Every tree clearly shows its caretaker
+- This prevents trees from becoming “everyone’s project and no one’s duty”
+
+## B2. Practical Care Feedback Instead of Generic Advice
+Round 2 will improve how guidance works.
+- User inputs actual care actions (like watering quantity)
+- System responds with clear next steps
+- Guidance becomes decision-support, not just information
+
+## B3. Clear Impact Tracking
+Round 2 will introduce measurable outcomes.
+- Tree survival duration
+- Care consistency
+- Aggregated survival trends
+This allows real-world impact to be understood, not assumed.
+
+## Closing Line (Safe for LLM Filtering)
+
+Round 2 does not add complexity.
+
+It improves responsibility, clarity, and reliability of the original idea.
